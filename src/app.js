@@ -3,11 +3,11 @@ import mongoose, { version } from "mongoose";
 import dotenv from "dotenv";
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUi  from "swagger-ui-express"
-import user_router from "./routes/user_route.js";
-import category_route from "./routes/category_route.js";
-import sub_category_route from "./routes/sub_category_route.js";
-import notice_route from "./routes/notice_route.js";
-import vendor_route from "./routes/vendor_route.js";
+import user_router from "../routes/user_route.js";
+import category_route from "../routes/category_route.js";
+import sub_category_route from "../routes/sub_category_route.js";
+import notice_route from "../routes/notice_route.js";
+import vendor_route from "../routes/vendor_route.js";
 
 const app = express();
 
@@ -43,7 +43,7 @@ dotenv.config();
 
 mongoose
   .connect(
-    `mongodb+srv://admin:hiddennepal1234567@cluster0.qdgptva.mongodb.net/?retryWrites=true&w=majority`
+    `mongodb+srv://admin:${process.env.MONGO_DB_PASSWORD}@cluster0.qdgptva.mongodb.net/?retryWrites=true&w=majority`
   )
   .then(() => app.listen(process.env.PORTS || 5000))
   .then(() => console.log("Connected to database and listening to port 5000"))
