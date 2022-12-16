@@ -43,7 +43,7 @@ dotenv.config();
 
 mongoose
   .connect(
-    `mongodb+srv://admin:${process.env.MONGO_DB_PASSWORD}@cluster0.qdgptva.mongodb.net/?retryWrites=true&w=majority`
+    `mongodb+srv://admin:hiddennepal1234567@cluster0.qdgptva.mongodb.net/?retryWrites=true&w=majority`
   )
   .then(() => app.listen(process.env.PORTS || 5000))
   .then(() => console.log("Connected to database and listening to port 5000"))
