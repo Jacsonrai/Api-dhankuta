@@ -12,7 +12,9 @@ import vendor_route from "../routes/vendor_route.js";
 const app = express();
 
 app.use(express.json());
-app.use("/","welcome to sawhazDhankuta Api")
+app.use("/",function(req,res){
+  res.status(200).send("Welcome to sawhaaz Dhankuta Api")
+})
 //user API Route
 app.use("/api/user", user_router);
 //category API Route
