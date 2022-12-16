@@ -1,5 +1,5 @@
 import express from 'express'
-import { add_vendor_category, delete_category, get_all_vendor_category, update_vendor_category } from '../controller/category_controller'
+import { add_vendor_category, delete_category, get_all_vendor_category, update_vendor_category } from '../controller/category_controller.js'
 const category_route=express.Router()
 
 category_route.get('/',get_all_vendor_category)

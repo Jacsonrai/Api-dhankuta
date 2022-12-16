@@ -1,5 +1,5 @@
 import express from 'express'
-import { add_vendor, get_all_vendor, get_single_vendor } from '../controller/vendor_controller'
+import { add_vendor, get_all_vendor, get_single_vendor } from '../controller/vendor_controller.js'
 const vendor_route=express.Router()
 
 vendor_route.get('/',get_all_vendor)

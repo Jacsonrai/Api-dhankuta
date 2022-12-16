@@ -1,5 +1,4 @@
-import { json } from "express";
-import Notice from "../model/notice_model";
+import Notice from "../model/notice_model.js";
 
 export const getAllNotice = async (req, res, next) => {
   try {

@@ -1,4 +1,4 @@
-import User from "../model/user_model";
+import User from "../model/user_model.js";
 import { Compare_password, Hash_Password } from "../middleware/passwordHash/passwordhash";
 export const getAllUser = async (req, res, next) => {
   let users;

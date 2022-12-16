@@ -1,5 +1,5 @@
 import express from 'express'
-import { createNotice, deleteNotice, getAllNotice, updateNotice } from '../controller/notice_controller'
+import { createNotice, deleteNotice, getAllNotice, updateNotice } from '../controller/notice_controller.js'
 const notice_route=express.Router()
 
 notice_route.get('/',getAllNotice)

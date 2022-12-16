@@ -1,5 +1,5 @@
-import Vendor from "../model/vendor_model";
-import url from "url";
+import Vendor from "../model/vendor_model.js";
+
 
 export const add_vendor = async (req, res, next) => {
   try {
@@ -103,3 +103,4 @@ export const get_single_vendor = async (req, res, next) => {
     res.status(200).json({ success: false, msg: error.message });
   }
 };
+

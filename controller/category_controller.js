@@ -1,5 +1,5 @@
 
-import Category from "../model/category_model";
+import Category from "../model/category_model.js";
 
 export const get_all_vendor_category = async (req, res, next) => {
   try {
