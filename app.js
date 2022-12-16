@@ -3,11 +3,11 @@ import mongoose, { version } from "mongoose";
 import dotenv from "dotenv";
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUi  from "swagger-ui-express"
-import user_router from "./routes/user_route";
-import category_route from "./routes/category_route";
-import sub_category_route from "./routes/sub_category_route";
-import notice_route from "./routes/notice_route";
-import vendor_route from "./routes/vendor_route";
+import user_router from "./routes/user_route.js";
+import category_route from "./routes/category_route.js";
+import sub_category_route from "./routes/sub_category_route.js";
+import notice_route from "./routes/notice_route.js";
+import vendor_route from "./routes/vendor_route.js";
 
 const app = express();
 
