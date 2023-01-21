@@ -5,11 +5,11 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm install",
     "start": "node ./src/app.js",
-    "dev":"nodemon --experimental-modules --es-module-specifier-resolution=node ./src/app.js"
+    "start-gendoc": "node swagger-doc.js",
+    "dev": "nodemon --experimental-modules --es-module-specifier-resolution=node ./src/app.js"
   },
   "author": "",
   "license": "ISC",
@@ -22,5 +22,8 @@
     "swagger-jsdoc": "^6.2.5",
     "swagger-ui-express": "^4.6.0",
     "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "swagger-autogen": "^2.22.0"
   }
 }
