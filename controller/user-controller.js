@@ -14,7 +14,7 @@ export const getAllUser = async (req, res, next) => {
 };
 
 export const createUser = async (req, res, next) => {
-  const { firstName, userName, lastName, contactName, email, password } =req.body;
+  const {username,email, password } =req.body;
   const hashPassword =await Hash_Password(password);
   let exgistingUser;
 
@@ -29,10 +29,8 @@ export const createUser = async (req, res, next) => {
       .json({ message: "Email Already Existed.Login Instead" });
   }
   const users = new User({
-    firstName,
-    lastName,
-    contactName,
-    userName,
+   
+    username,
     email,
     password: hashPassword,
   });
@@ -41,7 +39,7 @@ export const createUser = async (req, res, next) => {
   } catch (err) {
     return console.log(err);
   }
-  return res.status(201).json({ users });
+  return res.status(201).json({message:"user created successfully",users });
 };
 
 export const LoginUser=async(req,res,next)=>{

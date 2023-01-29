@@ -6,7 +6,7 @@ const user_router=express.Router()
 
 user_router.get('/',getAllUser)
 
-user_router.post('/sign-in',createUser)
+user_router.post('/sign-up',createUser)
 user_router.post('/login',LoginUser)
 
 export default user_router

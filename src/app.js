@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose, { version } from "mongoose";
 import dotenv from "dotenv";
+import cors from 'cors'
 import user_router from "../routes/user_route.js";
 import category_route from "../routes/category_route.js";
 import sub_category_route from "../routes/sub_category_route.js";
@@ -10,8 +11,9 @@ import vendor_route from "../routes/vendor_route.js";
 
 const app = express();
 
-app.use(express.json());
 
+app.use(express.json());
+app.use(cors())
 //user API Route
 app.use("/api/user", user_router);
 //category API Route

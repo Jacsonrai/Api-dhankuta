@@ -2,20 +2,24 @@
 import mongoose from "mongoose";
 const Schema=mongoose.Schema;
 const userSchema=new Schema({
-   firstName:{
+   // firstName:{
+   //  type:String,
+   //  required:true
+   // },
+   // lastName:{
+   //  type:String,
+   //  required:true
+   // },
+   // userName:{
+   //  type:String,
+   //  required:true
+   // },
+   // contactName:{
+   //  type:Number,
+   //  required:true
+   // },
+   username:{
     type:String,
-    required:true
-   },
-   lastName:{
-    type:String,
-    required:true
-   },
-   userName:{
-    type:String,
-    required:true
-   },
-   contactName:{
-    type:Number,
     required:true
    },
    password:{
